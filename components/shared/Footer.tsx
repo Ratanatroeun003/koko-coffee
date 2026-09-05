@@ -1,128 +1,98 @@
+import React from 'react';
 import { FaFacebook, FaTelegram, FaPhone } from 'react-icons/fa';
+import { MapPin, Phone } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t border-border rounded-md bg-background">
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 sm:gap-8 px-4 py-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
-        {/* Column 1 */}
-        <div>
-          {/* <h2 className="text-lg font-bold">Quick Links</h2>
-          <nav className="flex flex-col items-start gap-2 text-sm text-muted-foreground">
-            <Link
-              href="/"
-              className="transition-colors hover:text-foreground hover:underline underline-offset-4"
+    <footer className="w-full border-t border-border bg-background/50 backdrop-blur-md shadow-xs">
+      {/* សម្រួលមកត្រឹម 2 Columns លើ Desktop ដើម្បីកុំឱ្យខូច Balance */}
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-8 px-4 py-8 sm:grid-cols-2 sm:px-6 lg:px-8">
+        {/* Column 1: Contact */}
+        <div className="flex flex-col gap-3">
+          <h2 className="font-khmer text-base font-bold text-foreground">
+            ទំនាក់ទំនង
+          </h2>
+          <div className="flex flex-col gap-2.5 text-sm text-muted-foreground">
+            <a
+              href="tel:+855966998037"
+              className="flex items-center gap-2 hover:text-foreground transition-colors w-fit"
             >
-              Home
-            </Link>
-            <Link
-              href="/menu"
-              className="transition-colors hover:text-foreground hover:underline underline-offset-4"
-            >
-              Menu
-            </Link>
-            <Link
-              href="/location"
-              className="transition-colors hover:text-foreground hover:underline underline-offset-4"
-            >
-              Location
-            </Link>
-            <Link
-              href="/about"
-              className="transition-colors hover:text-foreground hover:underline underline-offset-4"
-            >
-              About
-            </Link>
-          </nav> */}
-        </div>
-        {/* Column 2 */}
-        <div>
-          {/* <h2 className="text-lg font-bold">Menu</h2>
-
-          <nav className="flex flex-col items-start gap-2 text-sm text-muted-foreground">
-            <Link
-              href="/menu"
-              className="transition-colors hover:text-foreground hover:underline underline-offset-4"
-            >
-              All Menu
-            </Link>
-            <Link
-              href="/menu?category=food"
-              className="transition-colors hover:text-foreground hover:underline underline-offset-4"
-            >
-              Food
-            </Link>
-            <Link
-              href="/menu?category=drink"
-              className="transition-colors hover:text-foreground hover:underline underline-offset-4"
-            >
-              Drink
-            </Link>
-          </nav> */}
-        </div>
-        {/* Column 3 */}
-        <div className="flex flex-col gap-4">
-          <h2 className="text-lg font-bold">Contact</h2>
-
-          <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-            <p>tel: 096 6998 037</p>
-            <p>Phnom Penh, Cambodia</p>
+              <Phone className="w-4 h-4 text-rose-800 shrink-0" />
+              <span>096 699 8037</span>
+            </a>
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-rose-800 shrink-0" />
+              <span>Phnom Penh, Cambodia</span>
+            </div>
           </div>
         </div>
-        {/* Column 4 */}
-        <div className="flex flex-col gap-4">
-          <h2 className="text-lg font-bold">Follow Us</h2>
 
+        {/* Column 2: Social Media */}
+        <div className="flex flex-col gap-3">
+          <h2 className="font-khmer text-base font-bold text-foreground">
+            បណ្តាញសង្គម
+          </h2>
           <div className="flex flex-col gap-2 text-sm text-muted-foreground">
             <a
               href="https://www.facebook.com/share/1GJaLQK9Zf/?mibextid=wwXIfr"
-              className="transition-colors hover:text-foreground"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 transition-colors hover:text-foreground w-fit"
             >
-              Facebook Page
+              <FaFacebook className="w-4 h-4 text-blue-600 shrink-0" />
+              <span>Facebook Page</span>
             </a>
             <a
               href="https://t.me/+855966998037"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-foreground"
+              className="inline-flex items-center gap-2 transition-colors hover:text-foreground w-fit"
             >
-              ឆាតទៅកាន់ Telegram
+              <FaTelegram className="w-4 h-4 text-sky-500 shrink-0" />
+              <span>Telegram Channel</span>
             </a>
           </div>
         </div>
       </div>
-      {/* Bottom */}
+
       <Separator />
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-sm text-muted-foreground sm:flex-row sm:px-6 lg:px-8">
+
+      {/* Bottom Bar */}
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-3 px-4 py-4 text-xs text-muted-foreground sm:flex-row sm:px-6 lg:px-8">
         <p>© {new Date().getFullYear()} Koko Cafe. All rights reserved.</p>
-        <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
-          <p>
-            Made by <span className="font-bold text-gray-950">@trna</span>
+
+        <div className="flex items-center gap-3">
+          <p className="text-xs">
+            Made by <span className="font-semibold text-foreground">@trna</span>
           </p>
-          <span className="font-medium text-foreground flex items-center justify-center gap-2">
+          <div className="flex items-center gap-1.5">
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://t.me/TroeunRatana"
-              className="transition-colors hover:text-blue-500 hover:scale-110 border-2 border-gray-950 rounded-full p-1"
+              aria-label="Developer Telegram"
+              className="rounded-full border border-border p-1.5 transition-all hover:border-sky-500 hover:text-sky-500 active:scale-95"
             >
-              <FaTelegram size="18" />
+              <FaTelegram size="14" />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.facebook.com/share/1aCyYxFoSR/?mibextid=wwXIfr"
-              className="transition-colors hover:text-blue-500 hover:scale-110 border-2 border-gray-950 rounded-full p-1"
+              aria-label="Developer Facebook"
+              className="rounded-full border border-border p-1.5 transition-all hover:border-blue-600 hover:text-blue-600 active:scale-95"
             >
-              <FaFacebook size="18" />
+              <FaFacebook size="14" />
             </a>
             <a
               href="tel:+855714407205"
-              className="transition-colors hover:text-blue-500 hover:scale-110 border-2 border-gray-950 rounded-full p-1"
+              aria-label="Developer Phone"
+              className="rounded-full border border-border p-1.5 transition-all hover:border-emerald-600 hover:text-emerald-600 active:scale-95"
             >
-              <FaPhone size="18" />
+              <FaPhone size="12" />
             </a>
-          </span>
+          </div>
         </div>
       </div>
     </footer>

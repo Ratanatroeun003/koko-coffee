@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Separator } from '@/components/ui/separator';
 import { MenuCard } from '@/components/MenuCard';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import BannerCarousel from '@/components/BannerCarousel';
@@ -15,6 +14,7 @@ const HomePage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [category, setCategory] = useState<FilterCategory>('all');
   const [isPaused, setIsPaused] = useState(false);
+
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
@@ -22,39 +22,45 @@ const HomePage = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, [isPaused, banners.length]);
+
   const filteredMenu = MENU.filter((m) => {
     if (category === 'all') return true;
     if (category === 'featured') return m.featured === true;
     return m.category === category;
   });
+
   return (
-    <div className="min-h-screen w-full mb-4">
-      <main className="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8 space-y-2 mt-4">
+    <div className="min-h-screen w-full pb-10">
+      <main className="mx-auto max-w-7xl space-y-4 px-2 sm:px-6 lg:px-8">
+        {/* Banner Carousel */}
         <BannerCarousel
           banners={banners}
           currentIndex={currentIndex}
           onHover={setIsPaused}
         />
-        <div className="sticky top-0 z-40 border-y border-border bg-background/85 backdrop-blur-md shadow-xs">
-          <div className="max-w-7xl py-3 mx-auto px-2 sm:px-6 lg:px-8">
+
+        {/* Sticky Category Tabs Bar */}
+        {/* ចំណុចកែសម្រួល៖ top-14 ឬ top-16 ឱ្យគេចផុតពី Header និងបន្ថែម bg-white/90 */}
+        <div className="sticky top-14 z-40 -mx-2 border-y border-stone-200/80 bg-white/90 px-2 backdrop-blur-md dark:border-stone-800 sm:mx-0 sm:rounded-xl sm:border sm:px-4">
+          <div className="mx-auto max-w-7xl py-2.5">
             <Tabs
               value={category}
               onValueChange={(val) => setCategory(val as FilterCategory)}
-              className="w-full max-w-4xl mx-auto"
+              className="mx-auto w-full max-w-4xl"
             >
               <TabsList
                 variant="line"
-                className="flex w-full overflow-x-auto whitespace-nowrap flex-nowrap justify-start no-scrollbar gap-2 touch-pan-x scroll-smooth max-w-full"
+                className="no-scrollbar flex w-full touch-pan-x flex-nowrap justify-start gap-2 overflow-x-auto whitespace-nowrap scroll-smooth"
               >
                 <TabsTrigger
                   value="all"
-                  className="font-khmer text-base sm:text-lg md:text-xl cursor-pointer whitespace-nowrap shrink-0 px-4 py-2"
+                  className="font-khmer text-sm sm:text-base cursor-pointer whitespace-nowrap shrink-0 px-3.5 py-1.5"
                 >
                   ទាំងអស់
                 </TabsTrigger>
                 <TabsTrigger
                   value="featured"
-                  className="font-khmer text-base sm:text-lg md:text-xl cursor-pointer whitespace-nowrap shrink-0 px-4 py-2"
+                  className="font-khmer text-sm sm:text-base cursor-pointer whitespace-nowrap shrink-0 px-3.5 py-1.5"
                 >
                   ប្រចាំហាង
                 </TabsTrigger>
@@ -62,7 +68,7 @@ const HomePage = () => {
                   <TabsTrigger
                     key={cat.id}
                     value={cat.id}
-                    className="font-khmer text-base sm:text-lg md:text-xl cursor-pointer whitespace-nowrap shrink-0 px-4 py-2"
+                    className="font-khmer text-sm sm:text-base cursor-pointer whitespace-nowrap shrink-0 px-3.5 py-1.5"
                   >
                     {cat.name}
                   </TabsTrigger>
@@ -70,21 +76,35 @@ const HomePage = () => {
               </TabsList>
             </Tabs>
           </div>
-          <Separator className="mt-2" />
         </div>
-        <motion.div
-          layout
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 sm:gap-2 lg:gap-3"
-        >
+
+        {/* Menu Grid */}
+        <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 lg:grid-cols-4">
           <AnimatePresence mode="popLayout">
             {filteredMenu.map((item, index) => (
-              <MenuCard key={item.id} item={item} isPriority={index < 4} />
+              <motion.div
+                key={item.id}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.2 }}
+              >
+                <MenuCard item={item} isPriority={index < 4} />
+              </motion.div>
             ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
+
+        {filteredMenu.length === 0 && (
+          <div className="py-12 text-center">
+            <p className="font-khmer text-stone-500">
+              មិនមានទិន្នន័យម្ហូបក្នុងប្រភេទទិន្នន័យនេះទេ
+            </p>
+          </div>
+        )}
       </main>
     </div>
   );
 };
-
 export default HomePage;
