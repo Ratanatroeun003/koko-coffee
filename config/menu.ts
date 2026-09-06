@@ -25,7 +25,7 @@ export const MENU: MenuItem[] = [
     name: 'បាយឆាសាច់គោ',
     price: 2.5,
     category: 'rice',
-    image: '/images/menu/beef-fried-rice.jpg',
+    image: '/images/menu/1.webp',
     featured: true,
   },
   {
@@ -47,7 +47,7 @@ export const MENU: MenuItem[] = [
     name: 'បាយឆាម្រះព្រៅសាច់គោ',
     price: 2.5,
     category: 'rice',
-    image: '/images/menu/beef-basil-fried-rice.jpg',
+    image: '/images/menu/4.webp',
     featured: true,
   },
   {

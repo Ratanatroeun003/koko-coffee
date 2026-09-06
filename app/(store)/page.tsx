@@ -1,6 +1,6 @@
-import HomePage from '@/components/pages/HomePage';
+import HomeContent from '@/components/pages/HomePage';
 const Page = () => {
-  return <HomePage />;
+  return <HomeContent />;
 };
 
 export default Page;

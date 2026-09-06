@@ -1,29 +1,32 @@
-import Link from 'next/link';
+'use client';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Sparkles } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import { MenuItem } from '@/config/menu';
 
 interface MenuDetailPageProps {
   menu: MenuItem;
 }
-
 export default function MenuDetailPage({ menu }: MenuDetailPageProps) {
+  const router = useRouter();
+  const handleBackClick = () => {
+    router.back();
+  };
   return (
     <div className="w-full min-h-[85vh] py-6 px-4 flex flex-col items-center justify-center">
       <div className="w-full max-w-md space-y-4">
-        {/* Modern Back Button (ប្រៀបធៀបជាមួយ Theme Rose/Amber) */}
-        <Link
-          href="/"
+        <button
+          type="button"
+          onClick={handleBackClick}
           className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-stone-600 hover:text-stone-950 dark:text-stone-400 dark:hover:text-white transition-colors group"
         >
           <div className="p-2 rounded-full bg-stone-100 group-hover:bg-stone-200 dark:bg-stone-800 dark:group-hover:bg-stone-700 transition-colors">
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" />
           </div>
           <span className="font-khmer">ត្រឡប់ទៅទំព័រដើម</span>
-        </Link>
-
+        </button>
         {/* Menu Detail Card */}
         <Card className="w-full overflow-hidden rounded-2xl border border-stone-200/80 dark:border-stone-800 shadow-lg p-0 bg-white dark:bg-stone-900">
           {/* Image Container with Badges */}
