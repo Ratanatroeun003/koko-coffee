@@ -125,7 +125,6 @@ const HomeContent = () => {
     </div>
   );
 };
-export default HomeContent;
 export const HomePage = () => {
   return (
     <Suspense
