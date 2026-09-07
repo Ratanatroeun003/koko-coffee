@@ -37,20 +37,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'KOKO PUB - Menu',
-  description: 'Explore our delicious food and drinks menu at KOKO PUB',
-  metadataBase: new URL('https://koko-menu.vercel.app'), // ដាក់ទីនេះដើម្បីកំណត់ Base URL
+  title: 'KOKO COFFEE',
+  description: 'koko coffee សូមស្វាគមន័',
+  metadataBase: new URL('https://koko-coffee.pages.dev'), // ដាក់ទីនេះដើម្បីកំណត់ Base URL
   openGraph: {
-    title: 'KOKO PUB MENU',
-    description: 'Explore our delicious food and drinks menu at KOKO PUB',
-    url: 'https://koko-menu.vercel.app', // ឥឡូវវានឹងស្ថិតក្នុង openGraph យ៉ាងត្រូវត្រឹមត្រូវ
-    siteName: 'Koko Pub',
+    title: 'KOKO Coffee',
+    description: 'Explore our delicious food and drinks menu at KOKO coffee',
+    url: 'https://koko-coffee.pages.dev/', // ឥឡូវវានឹងស្ថិតក្នុង openGraph យ៉ាងត្រូវត្រឹមត្រូវ
+    siteName: 'Koko coffee',
     images: [
       {
-        url: '/images/menu/koko_pub.webp', // បើមាន metadataBase ហើយ អាចដាក់ path ធម្មតាក៏បាន ឬដាក់លីងពេញក៏បាន
+        url: '/images/menu/koko_coffee.webp', // បើមាន metadataBase ហើយ អាចដាក់ path ធម្មតាក៏បាន ឬដាក់លីងពេញក៏បាន
         width: 800,
         height: 800,
-        alt: 'Koko Pub Logo',
+        alt: 'Koko coffee Logo',
       },
     ],
     locale: 'km_KH',
