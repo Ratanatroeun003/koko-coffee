@@ -9,6 +9,7 @@ import BannerCarousel from '@/components/BannerCarousel';
 import { MENU, CATEGORIES, FilterCategory } from '@/config/menu';
 import banner1 from '@/public/images/menu/banner1.webp';
 import banner2 from '@/public/images/menu/banner2.webp';
+// import banner3 from '@/public/images/menu/banner3.webp';
 const banners = [banner1, banner2];
 const HomeContent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,7 +41,7 @@ const HomeContent = () => {
     if (isPaused || banners.length <= 1) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % banners.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [isPaused]);
 
@@ -54,13 +55,13 @@ const HomeContent = () => {
 
   return (
     <div className="min-h-screen w-full pb-10">
+      <BannerCarousel
+        banners={banners}
+        currentIndex={currentIndex}
+        onHover={setIsPaused}
+      />
       <main className="mx-auto max-w-7xl space-y-4 px-2 sm:px-6 lg:px-8">
-        <BannerCarousel
-          banners={banners}
-          currentIndex={currentIndex}
-          onHover={setIsPaused}
-        />
-        <div className="sticky top-14 z-40 -mx-2 border-y border-stone-200/80 bg-white/90 px-2 backdrop-blur-md sm:mx-0 sm:rounded-xl sm:border sm:px-4">
+        <div className="sticky top-0 z-40 -mx-2 border-y border-stone-200/80 bg-white/90 px-2 backdrop-blur-md sm:mx-0 sm:rounded-xl sm:border sm:px-4">
           <div className="mx-auto max-w-7xl py-2.5">
             <Tabs
               value={activeCategory}

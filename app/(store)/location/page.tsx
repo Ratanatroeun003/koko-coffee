@@ -6,7 +6,7 @@ import store from '@/public/images/menu/koko_coffee.webp';
 
 const LocationPage = () => {
   return (
-    <main className="min-h-screen w-full px-4 py-6 sm:py-10">
+    <main className="min-h-screen w-full pt-20 px-4 py-6 sm:py-10">
       <div className="mx-auto w-full max-w-3xl space-y-6">
         {/* Modern Back Button */}
         <Link

@@ -5,8 +5,8 @@ import { MapPin, Phone } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-stone-200/80 bg-gray-200/80 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-2.5 sm:px-6">
+    <header className="absolute z-10 w-full">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-1 sm:px-6">
         {/* Brand / Logo */}
         <Link href="/" className="group flex items-center gap-3">
           <div className="relative h-12 w-12 overflow-hidden border border-stone-200 shadow-sm transition-transform duration-300 group-hover:scale-105">
@@ -20,10 +20,10 @@ const Header = () => {
             />
           </div>
           <div className="flex flex-col leading-tight">
-            <span className="font-bungee text-2xl font-extrabold tracking-wide text-yellow-900 transition-colors group-hover:scale-105">
+            <span className="font-bungee text-2xl font-extrabold tracking-wide text-black transition-colors group-hover:scale-105">
               KOKO
             </span>
-            <span className="font-bungee text-xs font-semibold tracking-widest text-stone-500">
+            <span className="font-bungee text-xs font-semibold tracking-widest text-black">
               COFFEE
             </span>
           </div>

@@ -11,9 +11,11 @@ const BannerCarousel = ({
 }) => {
   return (
     <div
-      className="relative aspect-video overflow-hidden rounded-xl border border-border shadow-sm"
+      className="relative max-w-7xl mx-auto z-0 inset-x-0 aspect-video overflow-hidden"
       onMouseEnter={() => onHover(true)}
       onMouseLeave={() => onHover(false)}
+      onTouchStart={() => onHover(true)}
+      onTouchEnd={() => onHover(false)}
     >
       <AnimatePresence mode="wait">
         <motion.div

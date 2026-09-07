@@ -15,22 +15,22 @@ export default function MenuDetailPage({ menu }: MenuDetailPageProps) {
     router.back();
   };
   return (
-    <div className="w-full min-h-[85vh] py-6 px-4 flex flex-col items-center justify-center">
+    <div className="w-full min-h-screen pt-20 py-6 px-4 flex flex-col items-center justify-center">
       <div className="w-full max-w-md space-y-4">
         <button
           type="button"
           onClick={handleBackClick}
-          className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-stone-600 hover:text-stone-950 dark:text-stone-400 dark:hover:text-white transition-colors group"
+          className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-stone-600 hover:cursor-pointer  transition-colors group"
         >
-          <div className="p-2 rounded-full bg-stone-100 group-hover:bg-stone-200 dark:bg-stone-800 dark:group-hover:bg-stone-700 transition-colors">
+          <div className="p-2 rounded-full bg-stone-100 group-hover:bg-stone-200 transition-colors">
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" />
           </div>
           <span className="font-khmer">ត្រឡប់ទៅទំព័រដើម</span>
         </button>
         {/* Menu Detail Card */}
-        <Card className="w-full overflow-hidden rounded-2xl border border-stone-200/80 dark:border-stone-800 shadow-lg p-0 bg-white dark:bg-stone-900">
+        <Card className="w-full overflow-hidden rounded-2xl border border-stone-200/80  shadow-lg p-0 bg-white dark:bg-stone-900">
           {/* Image Container with Badges */}
-          <div className="relative w-full aspect-square overflow-hidden bg-stone-100 dark:bg-stone-800">
+          <div className="relative w-full aspect-square overflow-hidden bg-stone-100">
             <Image
               src={menu.image}
               alt={menu.name}
@@ -57,10 +57,10 @@ export default function MenuDetailPage({ menu }: MenuDetailPageProps) {
           {/* Card Content */}
           <CardContent className="p-5 flex items-center justify-between gap-4">
             <div className="space-y-1">
-              <h1 className="font-khmer text-xl sm:text-2xl font-bold text-stone-900 dark:text-stone-100 leading-snug">
+              <h1 className="font-khmer text-xl sm:text-2xl font-bold text-stone-900 leading-snug">
                 {menu.name}
               </h1>
-              <p className="text-xs font-khmer text-stone-500 dark:text-stone-400">
+              <p className="text-xs font-khmer text-stone-500">
                 រៀបចំថ្មីៗក្តៅៗតាមការកុម្ម៉ង់
               </p>
             </div>
