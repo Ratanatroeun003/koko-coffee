@@ -39,11 +39,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'KOKO COFFEE',
   description: 'koko coffee សូមស្វាគមន័',
-  metadataBase: new URL('https://koko-coffee.pages.dev'), // ដាក់ទីនេះដើម្បីកំណត់ Base URL
+  metadataBase: new URL('https://koko-coffee-five.vercel.app'), // ដាក់ទីនេះដើម្បីកំណត់ Base URL
   openGraph: {
     title: 'KOKO Coffee',
     description: 'Explore our delicious food and drinks menu at KOKO coffee',
-    url: 'https://koko-coffee.pages.dev/', // ឥឡូវវានឹងស្ថិតក្នុង openGraph យ៉ាងត្រូវត្រឹមត្រូវ
+    url: 'https://koko-coffee-five.vercel.app', // ឥឡូវវានឹងស្ថិតក្នុង openGraph យ៉ាងត្រូវត្រឹមត្រូវ
     siteName: 'Koko coffee',
     images: [
       {
