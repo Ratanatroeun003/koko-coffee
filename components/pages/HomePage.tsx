@@ -70,7 +70,7 @@ const HomeContent = () => {
             >
               <TabsList
                 variant="line"
-                className="no-scrollbar flex w-full touch-pan-x flex-nowrap justify-start pl-7 pr-4 py-1 gap-2 overflow-x-auto whitespace-nowrap scroll-smooth"
+                className="no-scrollbar flex w-full touch-pan-x flex-nowrap justify-start gap-2 overflow-x-auto whitespace-nowrap px-2 py-1 scroll-smooth"
               >
                 <TabsTrigger
                   value="all"
@@ -99,12 +99,11 @@ const HomeContent = () => {
         </div>
 
         {/* Menu Grid */}
-        <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-1 sm:gap-3 md:grid-cols-3 lg:grid-cols-4">
           <AnimatePresence mode="popLayout">
             {filteredMenu.map((item, index) => (
               <motion.div
                 key={item.id}
-                layout
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
