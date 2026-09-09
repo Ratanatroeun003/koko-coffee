@@ -9,8 +9,8 @@ import BannerCarousel from '@/components/BannerCarousel';
 import { MENU, CATEGORIES, FilterCategory } from '@/config/menu';
 import banner1 from '@/public/images/menu/banner1.webp';
 import banner2 from '@/public/images/menu/banner2.webp';
-// import banner3 from '@/public/images/menu/banner3.webp';
-const banners = [banner1, banner2];
+import banner3 from '@/public/images/menu/banner3.webp';
+const banners = [banner1, banner2, banner3];
 const HomeContent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
