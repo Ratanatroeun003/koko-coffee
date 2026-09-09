@@ -61,7 +61,7 @@ export default function MenuDetailPage({ menu }: MenuDetailPageProps) {
                 {menu.name}
               </h1>
               <p className="text-xs font-khmer text-stone-500">
-                រៀបចំថ្មីៗក្តៅៗតាមការកុម្ម៉ង់
+                រៀបចំថ្មីៗក្តៅៗតាមការកម្ម៉ង់
               </p>
             </div>
 
