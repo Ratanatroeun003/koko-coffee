@@ -1,7 +1,7 @@
 // 📁 config/menu.ts
 
 export const CATEGORIES = [
-  { id: 'drinks', name: 'ភេសជ្ជៈ', nameEn: 'Drinks' },
+  { id: 'drinks', name: 'កាហ្វេ/ភេសជ្ជៈ', nameEn: 'Drinks' },
   { id: 'rice', name: 'បាយ', nameEn: 'Rice' },
   { id: 'noodle', name: 'មី', nameEn: 'Noodles' },
   { id: 'soup', name: 'សម្ល/ស្ងោរ', nameEn: 'Soups' },
@@ -47,7 +47,14 @@ export const MENU: MenuItem[] = [
   { id: '21', name: 'ផាត់កាផៅសាច់គោ ឬសាច់ជ្រូក', price: 2.5, category: 'rice', image: '/images/menu/21.webp' },
   { id: '22', name: 'ឆាត្រកួនសាច់គោ', price: 2.5, category: 'stir-fry', image: '/images/menu/22.webp' },
   { id: '23', name: 'ឆាសៀងសាច់ជ្រូក', price: 2.5, category: 'stir-fry', image: '/images/menu/23.webp' },
+  
 
+  // noddle
+  { id: '82', name: 'គុយទាវសាច់គោ', price: 2.5, category: 'noodle', image: '/images/menu/82.webp' },
+  { id: '83', name: 'គុយទាវសាច់ជ្រូក', price: 2.5, category: 'noodle', image: '/images/menu/83.webp' },
+  { id: '84', name: 'គុយទាវប្រហិតសាច់គោ', price: 2.5, category: 'noodle', image: '/images/menu/84.webp' },
+  { id: '85', name: 'គុយទាវប្រហិតសាច់ត្រី', price: 2.5, category: 'noodle', image: '/images/menu/85.webp' },
+  { id: '86', name: 'គុយទាវសាច់ជ្រូកចិញ្រ្ចាំ', price: 2.5, category: 'noodle', image: '/images/menu/86.webp' },
 
 
   // DRINKS
@@ -109,11 +116,11 @@ export const MENU: MenuItem[] = [
   { id: '45', name: 'ម៉ាតឆាដូងក្រអូប', price: 1.75, category: 'drinks', image: '/images/menu/45.webp',featured:true },
   { id: '62', name: 'koko តែគុជ', price: 1.5, category: 'drinks', image: '/images/menu/62.webp',featured:true },
   // TOPPINGS
-  { id: '73', name: 'គុជស្ងោរ', price: 0.25, category: 'toppings', image: '/images/menu/topping-1.webp' },
-  { id: '74', name: 'ឆៅគួយ', price: 0.25, category: 'toppings', image: '/images/menu/topping-2.webp' },
-  { id: '75', name: 'ចាហួយឈូស', price: 0.25, category: 'toppings', image: '/images/menu/topping-3.webp' },
-  { id: '76', name: 'ចាហួយប៉េស', price: 0.25, category: 'toppings', image: '/images/menu/topping-4.webp' },
-  { id: '77', name: 'ចាហួយប្រោន', price: 0.25, category: 'toppings', image: '/images/menu/topping-5.webp' },
-  { id: '78', name: 'ចាហួយស្រ្តបឺរី', price: 0.25, category: 'toppings', image: '/images/menu/topping-6.webp' },
-  { id: '79', name: 'គ្រីម', price: 0.5, category: 'toppings', image: '/images/menu/topping-7.webp' },
+  { id: '73', name: 'គុជស្ងោរ', price: 0.25, category: 'toppings', image: '/images/menu/73.webp' },
+  { id: '74', name: 'ឆៅគួយ', price: 0.25, category: 'toppings', image: '/images/menu/74.webp' },
+  { id: '75', name: 'ចាហួយឈូស', price: 0.25, category: 'toppings', image: '/images/menu/75.webp' },
+  { id: '76', name: 'ចាហួយប៉េស', price: 0.25, category: 'toppings', image: '/images/menu/76.webp' },
+  { id: '77', name: 'ចាហួយប្រោន', price: 0.25, category: 'toppings', image: '/images/menu/77.webp' },
+  { id: '78', name: 'ចាហួយស្រ្តបឺរី', price: 0.25, category: 'toppings', image: '/images/menu/78.webp' },
+  { id: '79', name: 'គ្រីម', price: 0.5, category: 'toppings', image: '/images/menu/79.webp' },
 ];
