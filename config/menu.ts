@@ -3,7 +3,7 @@
 export const CATEGORIES = [
   { id: 'drinks', name: 'កាហ្វេ/ភេសជ្ជៈ', nameEn: 'Drinks' },
   { id: 'rice', name: 'បាយ', nameEn: 'Rice' },
-  { id: 'noodle', name: 'មី', nameEn: 'Noodles' },
+  { id: 'noodle', name: 'មី/គុយទាវ', nameEn: 'Noodles' },
   { id: 'soup', name: 'សម្ល/ស្ងោរ', nameEn: 'Soups' },
   { id: 'stir-fry', name: 'ឆា', nameEn: 'Stir-fry' },
   { id: 'snacks', name: 'អាហារសម្រន់', nameEn: 'Snacks' },
@@ -23,6 +23,13 @@ export interface MenuItem {
 }
 
 export const MENU: MenuItem[] = [
+
+  // noddle
+  { id: '82', name: 'គុយទាវសាច់គោ', price: 2.5, category: 'noodle', image: '/images/menu/82.webp' },
+  { id: '83', name: 'គុយទាវសាច់ជ្រូក', price: 2.5, category: 'noodle', image: '/images/menu/83.webp' },
+  { id: '84', name: 'គុយទាវប្រហិតសាច់គោ', price: 2.5, category: 'noodle', image: '/images/menu/84.webp' },
+  { id: '85', name: 'គុយទាវប្រហិតសាច់ត្រី', price: 2.5, category: 'noodle', image: '/images/menu/85.webp' },
+  { id: '86', name: 'គុយទាវសាច់ជ្រូកចិញ្រ្ចាំ', price: 2.5, category: 'noodle', image: '/images/menu/86.webp' },
   // FOOD ITEMS
   { id: '1', name: 'បាយឆាសាច់គោ', price: 2.5, category: 'rice', image: '/images/menu/1.webp', featured: true },
   { id: '2', name: 'បាយសាច់ជ្រូកពងទាចៀន', price: 2.5, category: 'rice', image: '/images/menu/2.webp' },
@@ -47,25 +54,11 @@ export const MENU: MenuItem[] = [
   { id: '21', name: 'ផាត់កាផៅសាច់គោ ឬសាច់ជ្រូក', price: 2.5, category: 'rice', image: '/images/menu/21.webp' },
   { id: '22', name: 'ឆាត្រកួនសាច់គោ', price: 2.5, category: 'stir-fry', image: '/images/menu/22.webp' },
   { id: '23', name: 'ឆាសៀងសាច់ជ្រូក', price: 2.5, category: 'stir-fry', image: '/images/menu/23.webp' },
-  
-
-  // noddle
-  { id: '82', name: 'គុយទាវសាច់គោ', price: 2.5, category: 'noodle', image: '/images/menu/82.webp' },
-  { id: '83', name: 'គុយទាវសាច់ជ្រូក', price: 2.5, category: 'noodle', image: '/images/menu/83.webp' },
-  { id: '84', name: 'គុយទាវប្រហិតសាច់គោ', price: 2.5, category: 'noodle', image: '/images/menu/84.webp' },
-  { id: '85', name: 'គុយទាវប្រហិតសាច់ត្រី', price: 2.5, category: 'noodle', image: '/images/menu/85.webp' },
-  { id: '86', name: 'គុយទាវសាច់ជ្រូកចិញ្រ្ចាំ', price: 2.5, category: 'noodle', image: '/images/menu/86.webp' },
-
-
-  // DRINKS
-
-
   // ice 
   { id: '38', name: 'អាយឡាតេ', price: 1.75, category: 'drinks', image: '/images/menu/38.webp' },
   { id: '49', name: 'អាយកាពូឈីណូ', price: 1.75, category: 'drinks', image: '/images/menu/49.webp' },
   { id: '50', name: 'អាយម៉ូកា', price: 1.75, category: 'drinks', image: '/images/menu/50.webp' },
   { id: '47', name: 'អាយអាមេរិចខេណូ', price: 1.25, category: 'drinks', image: '/images/menu/47.webp' },
-  
  // cream
  { id: '64', name: 'កាហ្វេដូងគ្រីម', price: 1.75, category: 'drinks', image: '/images/menu/64.webp' },
  { id: '65', name: 'តែបៃតងដូងគ្រីម', price: 1.75, category: 'drinks', image: '/images/menu/65.webp' },
