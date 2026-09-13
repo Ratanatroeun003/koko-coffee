@@ -54,6 +54,7 @@ export const MENU: MenuItem[] = [
   { id: '21', name: 'ផាត់កាផៅសាច់គោ ឬសាច់ជ្រូក', price: 2.5, category: 'rice', image: '/images/menu/21.webp' },
   { id: '22', name: 'ឆាត្រកួនសាច់គោ', price: 2.5, category: 'stir-fry', image: '/images/menu/22.webp' },
   { id: '23', name: 'ឆាសៀងសាច់ជ្រូក', price: 2.5, category: 'stir-fry', image: '/images/menu/23.webp' },
+  { id: '87', name: 'ប្រហុកអាំង', price: 2.5, category: 'stir-fry', image: '/images/menu/87.webp',featured:true },
   // ice 
   { id: '38', name: 'អាយឡាតេ', price: 1.75, category: 'drinks', image: '/images/menu/38.webp' },
   { id: '49', name: 'អាយកាពូឈីណូ', price: 1.75, category: 'drinks', image: '/images/menu/49.webp' },
