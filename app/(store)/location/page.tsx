@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, MapPin, ExternalLink, Phone, Clock } from 'lucide-react';
-import store from '@/public/images/menu/koko_coffee.webp';
+import store from '@/public/images/store/koko_coffee.webp';
 
 const LocationPage = () => {
   return (

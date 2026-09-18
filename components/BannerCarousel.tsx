@@ -11,7 +11,7 @@ const BannerCarousel = ({
 }) => {
   return (
     <div
-      className="relative max-w-7xl mx-auto z-0 inset-x-0 aspect-video overflow-hidden"
+      className="relative max-w-7xl mx-auto mb-4 z-0 inset-x-0 aspect-video overflow-hidden"
       onMouseEnter={() => onHover(true)}
       onMouseLeave={() => onHover(false)}
       onTouchStart={() => onHover(true)}

@@ -7,9 +7,9 @@ import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useRouter, useSearchParams } from 'next/navigation';
 import BannerCarousel from '@/components/BannerCarousel';
 import { MENU, CATEGORIES, FilterCategory } from '@/config/menu';
-import banner1 from '@/public/images/menu/banner1.webp';
-import banner2 from '@/public/images/menu/banner2.webp';
-import banner3 from '@/public/images/menu/banner3.webp';
+import banner1 from '@/public/images/store/banner1.webp';
+import banner2 from '@/public/images/store/banner2.webp';
+import banner3 from '@/public/images/store/banner3.webp';
 const banners = [banner1, banner2, banner3];
 const HomeContent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,7 +48,7 @@ const HomeContent = () => {
   const filteredMenu = useMemo(() => {
     return MENU.filter((item) => {
       if (activeCategory === 'all') return true;
-      if (activeCategory === 'featured') return item.featured === true;
+      if (activeCategory === 'featured') return item.featured == true;
       return item.category === activeCategory;
     });
   }, [activeCategory]);

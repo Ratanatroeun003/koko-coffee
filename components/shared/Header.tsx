@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '@/public/images/menu/koko_coffee.webp';
+import logo from '@/public/images/store/koko_coffee.webp';
 import { MapPin, Phone, Coffee } from 'lucide-react';
 
 const Header = () => {
