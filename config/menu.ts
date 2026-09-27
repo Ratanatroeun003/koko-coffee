@@ -58,7 +58,7 @@ export const MENU: MenuItem[] = [
   { id: 'of-7', name: 'កកូរឆ្អឹងជំនីជ្រូក / ត្រី (ចាន)', price: 12000, category: 'order-food', image: '/images/of/7.webp' },
   { id: 'of-8', name: 'កកូរឆ្អឹងជំនីជ្រូក / ត្រី (ឆ្នាំង)', price: 25000, category: 'order-food', image: '/images/of/8.webp' },
   { id: 'of-9', name: 'ម្ជូរយួន (ចាន)', price: 12000, category: 'order-food', image: '/images/of/9.webp' },
-  { id: 'of-10', name: 'ម្ជូរយួន (ឆ្នាំង)', price:250005, category: 'order-food', image: '/images/of/10.webp' },
+  { id: 'of-10', name: 'ម្ជូរយួន (ឆ្នាំង)', price:25000, category: 'order-food', image: '/images/of/10.webp' },
   { id: 'of-11', name: 'ម្ជូរគ្រឿង (ចាន)', price: 12000, category: 'order-food', image: '/images/of/11.webp' },
   { id: 'of-12', name: 'ម្ជូរគ្រឿង (ឆ្នាំង)', price: 25000, category: 'order-food', image: '/images/of/12.webp' },
   { id: 'of-13', name: 'ម្ជូរស្រែ (ចាន)', price: 12000, category: 'order-food', image: '/images/of/13.webp' },
