@@ -36,13 +36,12 @@ export const MenuCard = ({
               <span>ប្រចាំហាង</span>
             </Badge>
           )}
-
           {/* Price Badge */}
-          <Badge className="absolute top-2 right-2 border-0 bg-amber-500 px-2.5 py-1 text-xs font-bold text-stone-950 shadow-sm backdrop-blur-xs">
-            ${item.price.toFixed(2)}
+          <Badge className="absolute top-2 right-2 border-0 tracking-tight bg-blue-200 px-2 py-1 text-lg text-stone-950 shadow-sm backdrop-blur-xs">
+            {Number(item.price).toLocaleString()}{' '}
+            <span className="font-semibold">៛</span>
           </Badge>
         </div>
-
         {/* Card Footer / Title */}
         <CardFooter className="flex bg-white rounded-none flex-1 items-center justify-center border-t border-stone-100 p-1 text-center">
           <p className="font-khmer text-sm font-semibold leading-snug text-stone-900 line-clamp-2 transition-colors group-hover:text-rose-900 sm:text-base">

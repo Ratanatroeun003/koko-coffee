@@ -53,7 +53,6 @@ export default function MenuDetailPage({ menu }: MenuDetailPageProps) {
               {menu.category}
             </Badge>
           </div>
-
           {/* Card Content */}
           <CardContent className="p-5 flex items-center justify-between gap-4">
             <div className="space-y-1">
@@ -64,11 +63,15 @@ export default function MenuDetailPage({ menu }: MenuDetailPageProps) {
                 រៀបចំថ្មីៗក្តៅៗតាមការកម្ម៉ង់
               </p>
             </div>
-
             <div className="shrink-0 text-right">
-              <span className="font-bold text-2xl sm:text-3xl text-amber-500 block">
-                ${menu.price.toFixed(2)}
-              </span>
+              <div className="inline-flex items-center gap-1.5 font-bold text-amber-500">
+                <span className="text-2xl tracking-tight">
+                  {Number(menu.price).toLocaleString()}
+                </span>
+
+                {/* ៛ Symbol - Bolder & Larger Size */}
+                <span className="text-2xl font-bold">៛</span>
+              </div>
             </div>
           </CardContent>
         </Card>
